@@ -1,0 +1,1 @@
+Sample text file to allow the creation of the folder structure within Github.
