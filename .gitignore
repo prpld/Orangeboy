@@ -1,3 +1,10 @@
+# Generated text files
+prpld_circ_*.txt
+EBSCO_*.txt
+PoudreLibraries_isbn_*.txt
+prpld_database_*.txt
+wam_*.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
