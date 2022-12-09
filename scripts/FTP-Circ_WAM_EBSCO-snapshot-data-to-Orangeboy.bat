@@ -19,7 +19,7 @@ echo Sending files via FTP to Orangeboy...
 echo.
 echo.
 
-"C:/Program Files (x86)/WinSCP/winscp.com" /command "option batch abort" "option confirm off" "open Orangeboy" "put C:\Orangeboy\Circulation\*.* /Circulation/" "put C:\Orangeboy\WAM\*.* /WAM/" "exit"
+"C:/Program Files (x86)/WinSCP/winscp.com" /command "option batch abort" "option confirm off" "open Orangeboy" "put C:\Orangeboy\Circulation\*.* /" "put C:\Orangeboy\WAM\*.* /" "exit"
 
 
 REM Run winscp to ftp the files over to EBSCO
