@@ -1,4 +1,4 @@
-WBVardef today=@"select to_char(current_timestamp,'mm-dd-yyyy')";
+WBVardef today=@"select to_char(current_date - 1,'mm-dd-yyyy')";
 WBExport -type=text
                  -file='C:\Orangeboy\WAM\prpld_database_$[today].txt'
                  -delimiter=','

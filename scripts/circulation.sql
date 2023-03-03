@@ -1,4 +1,4 @@
-WBVardef today=@"select to_char(current_timestamp,'mm-dd-yyyy')";
+WBVardef today=@"select to_char(current_date - 1,'mm-dd-yyyy')";
 WBExport -type=text
                  -file='C:\Orangeboy\Circulation\prpld_circ_$[today].txt'
                  -delimiter=','
@@ -20,5 +20,7 @@ ON i.id = ct.item_record_id
 JOIN sierra_view.patron_view p 
 ON p.id = ct.patron_record_id 
 WHERE ct.op_code = 'o' 
-AND ct.transaction_gmt BETWEEN '2022-10-06' AND '2022-10-14'  
+-- AND ct.transaction_gmt BETWEEN '2022-10-06' AND '2022-10-14'
+-- The line below should dynamically query the data from the previous Friday to this week's Thursday  
+WHERE w.logged_gmt between (CURRENT_DATE - '7 day'::interval) and (CURRENT_DATE)
 ORDER BY ct.transaction_gmt; 
